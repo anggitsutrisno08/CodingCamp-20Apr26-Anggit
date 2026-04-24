@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal productivity dashboard with time display, focus timer, to-do list, and quick links">
+    <title>Life Dashboard</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Time and Greeting Section -->
+        <section class="time-section">
+            <div id="greeting" class="greeting"></div>
+            <div id="current-time" class="current-time"></div>
+            <div id="current-date" class="current-date"></div>
+        </section>
+        
+        <button id="toggle-theme">Toggle Dark Mode</button>
+
+        
+        <!-- Focus Timer Section -->
+        <section class="timer-section">
+            <h2>Focus Timer</h2>
+            <div id="timer-display" class="timer-display">25:00</div>
+            <div class="timer-controls">
+                <button id="timer-start" class="btn btn-primary">Start</button>
+                <button id="timer-stop" class="btn btn-secondary">Stop</button>
+                <button id="timer-reset" class="btn btn-secondary">Reset</button>
+            </div>
+            <div style="margin-top: 12px;">
+            <input type="number" id="pomodoro-input" placeholder="Minutes" min="1" style="padding:8px; border-radius:6px; border:1px solid #ccc;">
+            <button id="set-timer" class="btn btn-primary">Set Time</button>
+            </div>
+        </section>
+
+
+        <!-- To-Do List Section -->
+        <section class="todo-section">
+            <h2>To-Do List</h2>
+            <form id="task-form" class="task-form">
+                <input type="text" id="task-input" class="task-input" placeholder="Add a new task..." autocomplete="off">
+                <button type="submit" class="btn btn-primary">Add</button>
+            </form>
+            <ul id="task-list" class="task-list"></ul>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="links-section">
+            <h2>Quick Links</h2>
+            <form id="link-form" class="link-form">
+                <input type="text" id="link-name" class="link-input" placeholder="Link name" autocomplete="off">
+                <input type="text" id="link-url" class="link-input" placeholder="https://example.com" autocomplete="off">
+                <button type="submit" class="btn btn-primary">Add Link</button>
+            </form>
+            <div id="links-container" class="links-container"></div>
+        </section>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
